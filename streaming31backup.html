@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>1QuranKareemRadio</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" type="text/css" href="radiostreamingcssaddition.css">
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+<script type="text/javascript" src="jquery.countdownTimer.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.countdownTimer.css" />
+  </head>
+
+<body style="background-image:url(radio1.jpg); background-size: cover;">
+<div id="countdowntimer" style="position:fixed;bottom:3%;left:0%;"><span id="future_date"> 
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+      $(function(){
+        $("#future_date").countdowntimer({
+          minutes : 0,
+			seconds:5,
+          size : "lg",
+			pauseButton: "pauseB",
+			stopButton:"stopB",
+			expiryUrl:"bgplayer-play://http://51.255.131.14:9994/;"
+			
+        });
+		  function urfunc() {
+        if(yourcond === true) {
+            jQuery("#future_date").countdowntimer("pause", "pause");
+        } else {
+            jQuery("#future_date").countdowntimer("pause", "resume");
+        } 
+        if(yourothercond === true) {
+            jQuery("#future_date").countdowntimer("stop", "stop");	
+        } else {
+            jQuery("#future_date").countdowntimer("stop", "start");
+        }
+        jQuery("#future_date").countdowntimer("destroy");
+    }
+      });
+</script>
+	
+	
+	
+	</span></div>
+	
+	
+		<button id="stopB">  stop </button>
+		<button id="pauseB" style="display:none;">  pause </button>
+
+	
+	
+<!-- Cover Radio Image-->
+<div class="coverimage" align="center">
+	<img src="radio-logo.png" style="position:absolute;left:0;top:35%;width:100%">
+</div>
+
+<div id="streamlink" align="center">
+	<a id="play" href="bgplayer-play://http://51.255.131.14:9994/;"onclick="play()">
+		<img src="play.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+	<a id="timer" href="bgplayer-stop://http://51.255.131.14:9994/;"onclick="timer()">
+		<img src="alarm3.png" style="width:18% !important;position: fixed;bottom: 3%;left: 66%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+</div>
+<div id="stop" style="display:none;" align="center">
+	<a href="bgplayer-stop://" onclick="stop()">
+		<img src="stop1.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;"></a>
+</div>
+
+<script type="text/javascript" src="radiostreamingscript.js"></script>
+	
+	<script type="text/javascript">
+	
+	
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,465 @@
+body
+{
+font-size:14pt;
+line-height:;
+font-family:Book Antiqua;
+background-color:white;
+width:100%;
+background-repeat:repeat;
+text-align:;
+margin:0px;
+color:#666666;
+direction:;
+background-image:url();
+@font-face
+{
+    font-family: shoroq;
+    src: url(shoroqfont.tff);
+
+}
+
+}
+p
+{
+padding-right: 4px;
+padding-left: 4px;
+
+}
+a
+{
+color:#666666;
+text-decoration:none;
+font-weight:bold;
+font-size:14pt;
+
+}
+a:visited
+{
+color:#666666;
+text-decoration:none;
+font-weight:bold;
+
+}
+h1
+{
+font-family:"Droid Arabic Naskh";
+font-size: 18pt;
+color: #474747;
+font-weight: regular;
+
+}
+h2
+{
+font-family:"Droid Arabic Naskh";
+font-size: 14pt;
+color: #474747;
+font-weight: regular;
+
+}
+h3
+{
+font-family:"Droid Arabic Naskh";
+font-size: 12pt;
+color: #474747;
+font-weight: bold;
+
+}
+li
+{
+font-family:"Droid Arabic Naskh";
+font-size: 11pt;
+font-style: normal;
+line-height: normal;
+padding: 0px;
+margin-bottom:10px;
+color: #666666;
+
+}
+.itemimage
+{
+border:solid 0px #aaa;
+max-width:100px;
+width: expression(this.width > 100 ? 100: true);
+vertical-align:middle;
+
+}
+.iimage
+{
+border:solid 0px #aaa;
+max-width:320px;
+width: expression(this.width > 320 ? 320: true);
+vertical-align:middle;
+
+}
+ol
+{
+list-style-type: decimal;
+
+}
+ul
+{
+list-style-type: square;
+
+}
+/*iconmenucssaddition2*/.iconmenulistcontainer
+{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+.iconmenucontainer
+{
+  border-bottom:solid 1px #c8c8c8;
+  background:white;
+  margin: 0;
+
+}
+.iconmenuitemlink
+{
+  display:block;
+  font-size: 16px;
+  font-family: sans-serif;
+   font-weight: 100;
+  color:#000;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+
+}
+.iconmenuimgcontainer
+{
+  float:left;
+  max-width:30px;
+   padding: 10px 5px 10px 7px;
+
+}
+ .iconmenuitemimage
+{
+  vertical-align: middle;
+  padding: 0;
+  height: 23px;
+  width: 23px;
+  border:0;
+
+}
+.iconmenuimgarrowcontainer
+{
+  float:right;
+   padding: 14px 10px 13px;
+   vertical-align: middle;
+
+}
+.iconmenuimgarrow
+{
+  border: none;
+  max-width: 100%;
+  vertical-align: middle;
+  width: 10px;
+
+}
+.iconmenutitle
+{
+  font-size:16px;
+font-family:"Droid Arabic Naskh";
+  font-weight: 100;
+  color:#000;
+  float:left;
+  padding: 14px 5px 13px;
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+color:#666666;
+font-size:14pt;
+
+}
+/*stripesmenucssaddition*/.stripesmenulistcontainer
+{
+text-align:left;
+width:100%;
+
+}
+       .StripesMenuList
+{
+    text-align:left;
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    margin-top:10px;
+
+}
+.StripesMenuItem
+{
+line-height: 35px;
+background: rgba(51, 51, 51, 0.6);
+margin-bottom:10px;
+
+}
+.StripesMenuTitle
+{
+ margin:0;
+ display:block;
+ font-size: 16px;
+ font-weight:100;
+font-family:"Droid Arabic Naskh";
+ text-decoration:none;
+ color:#fff;
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+
+}
+.StripesMenuImage
+{
+ vertical-align:middle;
+ margin-left:15px;
+ margin-top:2px;
+ margin-right:10px;
+ margin-bottom:2px;
+
+}
+/*audiostreamcssaddition*/.audiostreambody
+{
+background:black
+}
+/*audioplaycssaddition*/body
+{
+background:black
+}
+.audio-header
+{
+azimuthfont-family: roboto, Verdana, sans-serif;
+padding:15px 10px;
+background: #f2f2f2;
+background: -moz-linear-gradient(top,  #f2f2f2 0%, #dddfe1 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#dddfe1));
+background: -webkit-linear-gradient(top,  #f2f2f2 0%,#dddfe1 100%);
+background: -o-linear-gradient(top,  #f2f2f2 0%,#dddfe1 100%);
+background: -ms-linear-gradient(top,  #f2f2f2 0%,#dddfe1 100%);
+background: linear-gradient(to bottom,  #f2f2f2 0%,#dddfe1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dddfe1',GradientType=0 );
+text-align:center;
+text-shadow: 0 1px 0 #fff;
+
+}
+.audio-header .streamtitle
+{
+font-family: shoroq;
+color:#858a8d;
+font-size:17px;
+font-weight:bold;
+padding:10px 10px 0px 10px;
+
+}
+.audio-header .trackname
+{
+color:#8b9093;
+font-size:14px;
+padding:0 0 5px 0;
+
+}
+.cover-image
+{
+padding:0px;
+
+}
+.audio-controls
+{
+position:absolute;
+bottom:0;
+background: #f2f2f2;
+background: -moz-linear-gradient(top,  #f2f2f2 0%, #dddfe1 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#dddfe1));
+background: -webkit-linear-gradient(top,  #f2f2f2 0%,#dddfe1 100%);
+background: -o-linear-gradient(top,  #f2f2f2 0%,#dddfe1 100%);
+background: -ms-linear-gradient(top,  #f2f2f2 0%,#dddfe1 100%);
+background: linear-gradient(to bottom,  #f2f2f2 0%,#dddfe1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dddfe1',GradientType=0 );
+height:50px;
+width:100%;
+text-align:center;
+padding:30px 0px 10px 0;
+
+}
+.audio-controls a
+{
+background:#9fa3a6;
+border:solid 1px #939799;
+padding:10px 20px;
+margin:0 5px;
+color:#fff;
+font-size:14px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+
+}
+@media only screen and (orientation : landscape)
+{
+.audio-controls
+{
+position:relative;
+
+}
+
+}
+/*responsivemenucssaddition*/@font-face
+{
+    font-family: 'helvetica-light';
+    src: url('helvetica-light.ttf') format('truetype');
+
+}
+/* ----- RESPONSIVE MENU ------ */.responsiveMenuList *
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.responsiveMenuList
+{
+    margin: 0 auto;
+    padding: 0px;
+    background: #dddddd;
+    display: block;
+    list-style: none;
+
+}
+.responsiveMenuList:after
+{
+    clear: both;
+
+}
+.responsiveMenuItem
+{
+    float: left;
+    margin: 2px;
+    width: calc(50% - 4px);
+
+}
+.responsiveMenuTitle
+{
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    color: #000;
+    width: 100%;
+    padding-bottom: 100%;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.responsiveMenuTitle > span
+{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+
+}
+.responsiveMenuImage
+{
+    display: table;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+@media screen and (orientation:landscape)
+{
+    .responsiveMenuItem    
+{
+        width: calc(33.33% - 4px);
+    
+}
+
+}
+/*buttonmenucssaddition*/#buttonmenutable
+{
+width: 90%
+}
+.buttonmenucontainer
+{
+    padding: 15px;
+    margin: 30px 0 0;
+    
+}
+  .buttonmenuitemcontainer
+{
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-top: solid 8px #444;
+    -webkit-box-shadow: 0px 0 12px rgba(0,0,0,.25);
+    -moz-box-shadow: 0px 0 12px rgba(0,0,0,.25);
+    box-shadow: 0px 0 12px rgba(0,0,0,.25);
+
+}
+ .buttonmenuitembackground
+{
+    display:block;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    color: #444;
+    font-size: 18px;
+    font-family: "Arial Black",sans-serif;
+    font-weight: 900;
+    padding: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+.buttonmenuitembackground:after 
+{
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url(buttonmenupagearrow.png) no-repeat;
+    background-size: 24px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    position: absolute;
+    display: inline-block;
+
+}
+

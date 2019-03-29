@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>1QuranKareemRadio</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" type="text/css" href="radiostreamingcssaddition.css">
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css"> 
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+<script type="text/javascript" src="jquery.countdownTimer.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.countdownTimer.css" />
+  </head>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+<body >
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<audio class="audio" id="audioStream">
+		<source type="audio/mpeg" src="http://51.255.131.14:9994/;">
+	</audio>
+	
+	
+<div data-role="page" style="background-image:url(radio1.jpg); background-size: cover;">
+
+	<!-- /header<div data-role="header">
+		<h1>Page Title</h1>
+	</div> -->
+
+	<!-- <div role="main" class="ui-content">
+	
+		
+
+		
+	</div> /content -->
+<!-- Cover Radio Image-->
+<div class="coverimage" align="center">
+	<img src="radio-logo.png" style="position:absolute;left:0;top:35%;width:100%">
+</div>
+
+
+
+<script type="text/javascript" src="radiostreamingscript.js"></script>
+	
+	<script >
+	
+		
+	function pr(){
+	xx=$("#slider-mins").val();
+document.write(xx);	
+	}
+		
+		</script>
+		
+		
+		
+
+<div  data-role="footer">
+	
+	
+<!--------------------START of count down timer   ---->
+
+	
+	<div id="countdowntimer" style="position:fixed;bottom:3%;left:0%;display:none;"><span id="future_date"> 
+	
+	<script type="text/javascript">
+			var	xx=$("#slider-mins").val();
+			var	yy=$("#slider-mins").val();
+
+      $(function(){
+        $("#future_date").countdowntimer({
+			
+          minutes : xx,
+		  hours   : yy,
+          size : "lg",
+			pauseButton: "pauseB",
+			stopButton:"stopB",
+			timeUp: cut
+			
+        });
+		  function urfunc() {
+        if(yourcond === true) {
+            jQuery("#future_date").countdowntimer("pause", "pause");
+        } else {
+            jQuery("#future_date").countdowntimer("pause", "resume");
+        } 
+        if(yourothercond === true) {
+            jQuery("#future_date").countdowntimer("stop", "stop");	
+        } else {
+            jQuery("#future_date").countdowntimer("stop", "start");
+        }
+        jQuery("#future_date").countdowntimer("destroy");
+    }
+      });
+</script>
+	
+	
+	
+	</span></div>
+	
+	
+		<button id="stopB">  stop </button>
+		<button id="pauseB" style="display:none;">  pause </button>
+	
+<!--------------------end of count down timer  ---------------------------- ---->
+	
+	
+	<!--	<h4>Page Footer</h4> -->
+	<div id="streamlink" align="center">
+	<a id="play" onclick="go()">
+		<img src="play.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+		
+		
+	<a id="timer" style="" href="#popupLogin" data-rel="popup">
+		<img src="alarm3.png" style="width:18% !important;position: fixed;bottom: 3%;left: 66%;border-radius: 101px;box-shadow: -4px 8px 23px #000;">
+	</a>
+		
+		
+
+<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all" data-dismissible="false">
+    <form style="background-color:#fff0cf;">
+        <div  style="padding:10px 20px;">
+            <h3>بعد كم من الوقت تود إيقاف الإذاعة تلقائيا</h3>
+			<label for="slider-fill">minutes</label>
+<input name="slider-fill" id="slider-mins"  min="0" max="50" step="5" data-highlight="false" type="range">
+			<label for="slider-fill">Hours</label>
+<input name="slider-fill" id="slider-hours"  min="0" max="24" step="1" data-highlight="true" type="range">
+            	<a onclick="s()"> Display </a>
+          <a  class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-clock " data-rel="button" onclick="s()">ابدأ الآن المؤقت</a>
+		  <a type="cancel" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-delete" data-role="back">إلغاء</a>
+			
+			<script>
+				$("#popupLogin").change(function() {
+  var slider_value = $("#slider-mins").val();
+  xx=$("#slider-mins").val();
+					document.write(slider_value);
+});
+					
+			</script>
+			
+		<p id="bottomline" >
+
+			</p>  	
+			
+
+
+        </div>
+    </form>
+</div>
+	
+</div>
+	
+	
+	
+	
+	
+	
+	
+<div id="stop" style="display:none;" align="center">
+	<a  onclick="cut()">
+		<img src="stop1.png" style="width:25% !important;position: fixed;bottom: 0%;left: 36%;border-radius: 101px;box-shadow: -4px 8px 23px #000;"></a>
+</div>
+	</div> 
+</div><!-- /page -->
+	
+	<script> 
+		
+		function go(){	
+document.getElementById("audioStream").play();	
+	if (navigator.onLine) 
+{
+document.getElementById('play').style.display = 'none';
+document.getElementById('stop').style.display = 'block';
+document.getElementById('timer').style.display = 'block';
+
+	}	
+	}
+	
+	
+	
+	    function cut(){		
+document.getElementById("audioStream").pause();	
+document.getElementById('stop').style.display = 'none';
+document.getElementById('play').style.display = 'block';
+document.getElementById('timer').style.display = 'none';
+	}
+	
+		
+		
+		function timer(){
+		$( "#popupLogin" ).popup( "open" );	
+	}
+		
+		function s(){
+		document.getElementById('countdowntimer').style.display = 'block';
+
+		}
+	
+	</script>
+</body>	
+	
+
+
+</html>

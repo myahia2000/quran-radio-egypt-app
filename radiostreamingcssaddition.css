@@ -1,0 +1,7 @@
+/*radiostreamingcssaddition*/
+.radiostream_container
+{
+    background-image: url(radio.jpg) repeat:no-repeat;
+    background-size: contain;
+    text-align: center;
+}
