@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+  <title>1QuranKareemRadio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+      .form_container
+      {
+        padding: 20px;
+        text-align: center;
+      }
+      .form_container input, .form_container textarea
+      {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        font-family: Sans-Serif;
+        font-weight: 200;
+        font-size:13px;
+        padding: 11px 15px;
+        -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    margin: 0 0 10px 0
+      }
+      .form_container input[type="text"], .form_container input[type="tel"], .form_container input[type="email"]
+      {
+        border: 1px solid #d9d9d9;
+        background: #eaedf1;
+        color: #596069;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+      }
+      .form_container textarea
+      {
+        border: 1px solid #d9d9d9;
+        background: #eaedf1;
+        width: 100%;
+        height: 100px;
+        resize: none;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+      }
+      .form_container input[type="button"]{
+        width: 100%;
+        color: #fff;
+        font-weight: 700;
+        background: #363f4b;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+        margin: 0;
+      }
+      .success_message
+      {
+        text-align:center;
+        padding:10px;
+        display:none;
+        font-size:14px;
+        font-family:sans-serif;
+        font-weight: 200;
+      }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload = function() {
+
+		if (!navigator.onLine) {
+			alert('You are offline.\nInternet connection is required for this page to work.');
+		}
+
+
+		var pos = window.location.href.indexOf("message=");
+		if (pos > 0)
+		{
+			var messagediv = document.getElementById("messagediv");
+			if (messagediv != null)
+			{
+				messagediv.style.display = "block";
+				var message = window.location.href.substring(pos+8);
+				if (message != "1")
+				{
+					messagediv.innerHTML = unescape(message);
+				}
+				setTimeout("HideMessage()",10000);
+			}
+			var formdiv = document.getElementById("formdiv");
+			if (formdiv != null)
+			{
+				formdiv.style.display = "none";
+			}
+		}
+	}
+
+	function HideMessage()
+	{
+		var messagediv = document.getElementById("messagediv");
+		if (messagediv != null)
+		{
+			messagediv.style.display = "none";
+		}
+		var formdiv = document.getElementById("formdiv");
+		if (formdiv != null)
+		{
+			formdiv.style.display = "block";
+		}
+	}
+
+	function SubmitClick()
+	{
+		var email = document.getElementById("email");
+		var mess = document.getElementById("message");
+		if(mess)
+		{
+			if(mess.value == "")
+			{
+				alert("Please enter message.");
+				return;
+			}
+			if(email)
+			{ 
+				if(email.value == "")
+				{
+					alert("Please enter email.");
+					return;
+				}
+				if(email.value.indexOf("@") == -1)
+				{
+					alert("Please enter correct email.");
+				}
+				else
+				{
+					document.getElementById("postForm").submit();
+				}
+			}
+			else
+			{
+				alert("Please enter email.");
+			}
+		}
+		else
+		{
+			alert("Please enter message.");
+		}
+	}
+</script>
+<div align="center">
+	<img src="contact_header.png" style="width:100%; display: block" alt="">
+</div>
+<div class="success_message" id="messagediv">نشكرك على ارسال الرسالة </div>
+<div align="center">
+	<div id="formdiv" align="left">
+		<form id="postForm" method="POST" action="http://seattleclouds.com/sendform.ashx">
+			<input id="sendtoaddress" name="sendtoaddress" value="myahia2000@hotmail.com" type="hidden">
+			<input id="username" name="username" value="myahia2000" type="hidden">
+			<input id="appid" name="appid" value="MatchGame1" type="hidden">
+			<input id="pageid" name="pageid" value="contact.html" type="hidden">
+			<div class="form_container">
+				<input autocomplete="on" name="Name:" placeholder="Name" value="" type="text"><br>
+				<input autocomplete="on" name="Phone Number:" placeholder="Phone Number" value="" type="tel"><br>
+				<input autocomplete="on" id="email" name="email" placeholder="Email ضع هنا" value="" type="text"><br>
+
+				<textarea id="message" name="Message:" placeholder="Message"></textarea>
+				<input value="Submit" onclick="SubmitClick()" type="button">
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>
