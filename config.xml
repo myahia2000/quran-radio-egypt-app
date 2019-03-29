@@ -13,7 +13,7 @@
   <plugin name="cordova-plugin-device" spec="1.1.2" />
   <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
 	 
-	<plugin spec="https://github.com/ademc/bg-player.git#1.0.0" source="git" />
+	<plugin spec="https://github.com/ademc/bg-player" source="git" />
 	
   
   
