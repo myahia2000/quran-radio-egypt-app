@@ -13,12 +13,9 @@
   <plugin name="cordova-plugin-device" spec="1.1.2" />
   <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
 	 
-	<plugin spec="https://github.com/ademc/bg-player" source="git" />
+	<plugin spec="https://github.com/ademc/bg-player" source="git" >
 	
-  <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.ademc.plugins.bg-player"
-        version="1.0.0">
+ 
 
   <name>BgPlayer</name>
 
