@@ -12,17 +12,8 @@
   <plugin name="cordova-plugin-inappbrowser" spec="1.3.0" />
   <plugin name="cordova-plugin-device" spec="1.1.2" />
   <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
-   <plugin name="bg-player" spec="1.0.0" />
-
-
-  <icon src="icon.png" />
-  <splash src="splash.png" />
-</widget>
-
-
-
-
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  
+  <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.ademc.plugins.bg-player"
         version="1.0.0">
@@ -79,3 +70,12 @@
 	<source-file src="src/com/ademc/plugins/PlayerService.java" target-dir="src/com/ademc/plugins"/>
   </platform>
 </plugin>
+
+  <icon src="icon.png" />
+  <splash src="splash.png" />
+</widget>
+
+
+
+
+
