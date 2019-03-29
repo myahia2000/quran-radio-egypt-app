@@ -1,0 +1,279 @@
+<html>
+	<head>
+		<title>MosaicTemplate</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="slidepagetype.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="swipeview.js"></script>
+
+		<script type="text/javascript">
+			var gallery = null;
+            window.onload = function() {
+              document.getElementById('wrapper').innerHTML = '';
+              (function() {
+                if (!Event.prototype.preventDefault) {
+                  Event.prototype.preventDefault = function() {
+                    this.returnValue = false;
+                  };
+                }
+                if (!Event.prototype.stopPropagation) {
+                  Event.prototype.stopPropagation = function() {
+                    this.cancelBubble = true;
+                  };
+                }
+                if (!Element.prototype.addEventListener) {
+                  var eventListeners = [];
+
+                  var addEventListener = function(type, listener /*, useCapture (will be ignored) */ ) {
+                    var self = this;
+                    var wrapper = function(e) {
+                      e.target = e.srcElement;
+                      e.currentTarget = self;
+                      if (listener.handleEvent) {
+                        listener.handleEvent(e);
+                      } else {
+                        listener.call(self, e);
+                      }
+                    };
+                    if (type == "DOMContentLoaded") {
+                      var wrapper2 = function(e) {
+                        if (document.readyState == "complete") {
+                          wrapper(e);
+                        }
+                      };
+                      document.attachEvent("onreadystatechange", wrapper2);
+                      eventListeners.push({
+                        object: this,
+                        type: type,
+                        listener: listener,
+                        wrapper: wrapper2
+                      });
+
+                      if (document.readyState == "complete") {
+                        var e = new Event();
+                        e.srcElement = window;
+                        wrapper2(e);
+                      }
+                    } else {
+                      this.attachEvent("on" + type, wrapper);
+                      eventListeners.push({
+                        object: this,
+                        type: type,
+                        listener: listener,
+                        wrapper: wrapper
+                      });
+                    }
+                  };
+                  var removeEventListener = function(type, listener /*, useCapture (will be ignored) */ ) {
+                    var counter = 0;
+                    while (counter < eventListeners.length) {
+                      var eventListener = eventListeners[counter];
+                      if (eventListener.object == this && eventListener.type == type && eventListener.listener == listener) {
+                        if (type == "DOMContentLoaded") {
+                          this.detachEvent("onreadystatechange", eventListener.wrapper);
+                        } else {
+                          this.detachEvent("on" + type, eventListener.wrapper);
+                        }
+                        break;
+                      }
+                      ++counter;
+                    }
+                  };
+                   var createEvent = function(eventType) {
+                    return {
+                      en: '',
+                      a1: '',
+                      a2: '',
+                      initEvent: function(eventName, arg1, arg2) {
+                        this.en = eventName;
+                        this.a1 = arg1;
+                        this.a2 = arg2;
+                      }
+                    };
+                  };
+                  HTMLDocument.prototype.createEvent = createEvent;
+                  Element.prototype.createEvent = createEvent;
+                  Element.prototype.dispatchEvent = function(ev) {
+                    this.fireEvent(ev.en, ev.a1, ev.a2);
+                  };
+                  Element.prototype.addEventListener = addEventListener;
+                  Element.prototype.removeEventListener = removeEventListener;
+                  if (HTMLDocument) {
+                    HTMLDocument.prototype.addEventListener = addEventListener;
+                    HTMLDocument.prototype.removeEventListener = removeEventListener;
+                  }
+                  if (Window) {
+                    Window.prototype.addEventListener = addEventListener;
+                    Window.prototype.removeEventListener = removeEventListener;
+                  }
+                }
+              })();
+              initGallery();
+            };
+
+            function getViewport() {
+              var viewPortWidth;
+              var viewPortHeight;
+              if (typeof window.innerWidth != 'undefined') {
+                viewPortWidth = window.innerWidth, viewPortHeight = window.innerHeight;
+              } else if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) {
+                viewPortWidth = document.documentElement.clientWidth, viewPortHeight = document.documentElement.clientHeight
+              } else {
+                viewPortWidth = document.getElementsByTagName('body')[0].clientWidth, viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+              }
+              return {
+                width: viewPortWidth,
+                height: viewPortHeight
+              };
+            }
+
+            function getSizePerservingAspectRatio(width, height) {
+              var viewPort = getViewport();
+              var aratio = 1;
+              if (viewPort.width < width || viewPort.height < height) {
+                var hratio = viewPort.width / width;
+                var vratio = viewPort.height / height;
+                aratio = Math.min(hratio, vratio);
+
+              }
+              return {
+                width: width * aratio,
+                height: height * aratio
+              };
+            }
+
+            function fireClick(link) {
+              var ael = document.createElement('a');
+              ael.href = link;
+              ael.style.display = 'none';
+              document.getElementsByTagName('body')[0].appendChild(ael);
+              var dispatch = document.createEvent("HTMLEvents");
+              dispatch.initEvent("click", true, true);
+              ael.dispatchEvent(dispatch);
+              document.getElementsByTagName('body')[0].removeChild(ael);
+            }
+
+            function cf(link) {
+              return function() {
+                fireClick(link)
+              }
+            }
+
+            function initGallery() {
+              var el, i, page = 0,
+                dots = document.querySelectorAll('#nav li');
+              document.getElementById('wrapper').innerHTML = '';
+              gallery = new SwipeView('#wrapper', {
+                numberOfPages: slides.length
+              });
+
+              var viewPort = getViewport();
+              var prel = (slides.length < 3) ? slides.length : 3;
+
+              // Load initial data
+              for (i = 0; i < prel; i++) {
+                page = i == 0 ? slides.length - 1 : i - 1;
+                el = document.createElement('img');
+                el.className = 'loading';
+                el.src = slides[page].img;
+
+                el.width = viewPort.width - 10;
+                el.height = viewPort.height - 10;
+                el.onload = function(obj) {
+                  var isize = getSizePerservingAspectRatio(this.naturalWidth || this.width, this.naturalHeight || this.height);
+                  this.width = isize.width - 10;
+                  this.height = isize.height - 10;
+                  this.className = '';
+                }
+                gallery.masterPages[i].appendChild(el);
+
+                el = document.createElement('span');
+                el.innerHTML = slides[page].desc;
+                gallery.masterPages[i].appendChild(el);
+                var link = slides[page].link || '';
+                if (link.length > 0) {
+                  gallery.masterPages[i].onclick = (function(opt) {
+                    return function() {
+                      fireClick(opt);
+                    };
+                  })(link);
+                }
+              }
+              gallery.onFlip(function() {
+                var el, upcoming, i;
+                var prel = (slides.length < 3) ? slides.length : 3;
+                var viewPort = getViewport();
+                for (i = 0; i < prel; i++) {
+                  upcoming = gallery.masterPages[i].dataset.upcomingPageIndex;
+
+                  if (upcoming != gallery.masterPages[i].dataset.pageIndex) {
+                    el = gallery.masterPages[i].querySelector('img');
+                    el.className = 'loading';
+                    el.src = slides[upcoming].img;
+                    var isize = getSizePerservingAspectRatio(el.naturalWidth || el.width, el.naturalHeight || el.height);
+                    el.width = isize.width - 10;
+                    el.height = isize.height - 10;
+                    el = gallery.masterPages[i].querySelector('span');
+                    el.innerHTML = slides[upcoming].desc;
+                  }
+                }
+
+                var currentDot = document.querySelector('#nav .selected');
+                if (currentDot != null) {
+                  currentDot.className = '';
+                }
+                if (dots.length > gallery.pageIndex + 1) {
+                  dots[gallery.pageIndex + 1].className = 'selected';
+                }
+                var link = slides[gallery.pageIndex].link || '';
+                if (link.length > 0) {
+                  gallery.masterPages[gallery.currentMasterPage].onclick = (function(opt) {
+                    return function() {
+                      fireClick(opt);
+                    };
+                  })(link);
+                }
+              });
+
+              gallery.onMoveOut(function() {
+                gallery.masterPages[gallery.currentMasterPage].className = gallery.masterPages[gallery.currentMasterPage].className.replace(/(^|\s)swipeview-active(\s|$)/, '');
+              });
+
+              gallery.onMoveIn(function() {
+                var className = gallery.masterPages[gallery.currentMasterPage].className;
+                /(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
+              });
+              gallery.onResize(function() {
+                var prel = (slides.length < 3) ? slides.length : 3;
+                var viewPort = getViewport();
+                for (i = 0; i < prel; i++) {
+                  el = gallery.masterPages[i].querySelector('img');
+                  var isize = getSizePerservingAspectRatio(el.naturalWidth || el.width, el.naturalHeight || el.height);
+
+                  el.width = isize.width - 10;
+                  el.height = isize.height - 10;
+                }
+              });
+            }
+		</script>
+
+	</head>
+	<body>
+		<div id="scriptwrapper"><script>var slides = [{"img":"prog2.jpg","desc":"برنامج فى موكب الدعاة","link":""},{"img":"prog3.jpg","desc":"برنامج فى رياض السيرة العطرة","link":""},{"img":"prog4.jpg","desc":"برنامج من أحاديث الأحكام","link":""},{"img":"prog5.jpg","desc":"من تسجيلاتنا الخارجية","link":""},{"img":"prog6.jpg","desc":"الانسان فى القرآن والسنة","link":""},{"img":"prog7.jpg","desc":"برنامج الوقف والابتداء","link":""},{"img":"prog8.jpg","desc":"برنامج مفاهيم اسلامية","link":""},{"img":"prog9.jpg","desc":"حديث الشيخ متولى الشعراوى","link":""},{"img":"prog10.jpg","desc":"برنامج سيرة ومسيرة","link":""},{"img":"prog11.jpg","desc":"برنامج مع الشباب","link":""},{"img":"prog12.jpg","desc":"برنامج بريد الاسلام","link":""},{"img":"prog13.jpg","desc":"برنامج بريد الاسلام","link":""},{"img":"prog14.jpg","desc":"برنامج بريد الاسلام","link":""},{"img":"prog15.jpg","desc":"برنامج بريد الاسلام","link":""},{"img":"prog16.jpg","desc":"مع الأحاديث القدسية","link":""},{"img":"prog17.jpg","desc":"القرآن وقضايا العصر","link":""},{"img":"prog18.jpg","desc":"برنامج الأسرة والمجتمع","link":""},{"img":"prog19.jpg","desc":"برنامج طلائع الإيمان","link":""},{"img":"prog20.jpg","desc":"موسوعة الفقه الإسلامى","link":""},{"img":"prog21.jpg","desc":"برنامج فقه المرأه","link":""},{"img":"prog22.jpg","desc":"برنامج بريد الإسلام","link":""},{"img":"prog23.jpg","desc":"برنامج بريد الإسلام","link":""},{"img":"prog24.jpg","desc":"الدين المعاملة","link":""},{"img":"prog25.jpg","desc":"الدين المعاملة","link":""},{"img":"prog26.jpg","desc":"الدين المعاملة","link":""},{"img":"prog27.jpg","desc":"فى ظلال الهدى النبوى","link":""},{"img":"prog28.jpg","desc":"من سير التابعين","link":""},{"img":"prog29.jpg","desc":"برنامج لغة القرآن","link":""},{"img":"prog30.jpg","desc":"برنامج براعم الإيمان","link":""},{"img":"prog31.jpg","desc":"التربية فى القرآن والسنة","link":""},{"img":"prog32.jpg","desc":"فى ظلال الهدى النبوى","link":""},{"img":"prog33.jpg","desc":"برنامج خواطر الإمام","link":""},{"img":"prog34.jpg","desc":"برنامج مصر الكنانة","link":""},{"img":"prog35.jpg","desc":"من مأثورات الصحابة والتابعين","link":""},{"img":"prog36.jpg","desc":"قصة آية","link":""},{"img":"prog37.jpg","desc":"من دوحة الدعاء","link":""},{"img":"prog38.jpg","desc":"برنامج مع القرآن الكريم","link":""},{"img":"prog39.jpg","desc":"برنامج سهرة مع القرآن الكريم","link":""},{"img":"prog40.jpg","desc":"برنامج باحث ورسالة","link":""},{"img":"prog41.jpg","desc":"من تراثنا الإذاعى","link":""},{"img":"prog43.jpg","desc":"شخصيات نزلت فيها آيات","link":""},{"img":"prog42.jpg","desc":"قراءة فى كتب التفسير","link":""},{"img":"prog44.jpg","desc":"فقة الأئمة فى حياة الأمة","link":""},{"img":"prog45.jpg","desc":"برنامج عقيدة المسلم","link":""},{"img":"prog46.jpg","desc":"أسرار ودلالات فى ختام الآيات","link":""},{"img":"prog47.jpg","desc":"مواقف إسلامية","link":""}];</script></div>
+		<div style="overflow: hidden; position: relative;" id="wrapper"></div>
+		<ul id="nav" style="padding-left: 11px; display: none;"><li id="prev" onclick="gallery.prev()"> - </li><li class="selected" onclick="gallery.goToPage(0)"></li><li class="" onclick="gallery.goToPage(1)"></li><li class="" onclick="gallery.goToPage(2)"></li><li class="" onclick="gallery.goToPage(3)"></li><li class="" onclick="gallery.goToPage(4)"></li><li class="" onclick="gallery.goToPage(5)"></li><li class="" onclick="gallery.goToPage(6)"></li><li class="" onclick="gallery.goToPage(7)"></li><li class="" onclick="gallery.goToPage(8)"></li><li class="" onclick="gallery.goToPage(9)"></li><li class="" onclick="gallery.goToPage(10)"></li><li class="" onclick="gallery.goToPage(11)"></li><li class="" onclick="gallery.goToPage(12)"></li><li class="" onclick="gallery.goToPage(13)"></li><li class="" onclick="gallery.goToPage(14)"></li><li class="" onclick="gallery.goToPage(15)"></li><li class="" onclick="gallery.goToPage(16)"></li><li class="" onclick="gallery.goToPage(17)"></li><li class="" onclick="gallery.goToPage(18)"></li><li class="" onclick="gallery.goToPage(19)"></li><li class="" onclick="gallery.goToPage(20)"></li><li class="" onclick="gallery.goToPage(21)"></li><li class="" onclick="gallery.goToPage(22)"></li><li class="" onclick="gallery.goToPage(23)"></li><li class="" onclick="gallery.goToPage(24)"></li><li class="" onclick="gallery.goToPage(25)"></li><li class="" onclick="gallery.goToPage(26)"></li><li class="" onclick="gallery.goToPage(27)"></li><li class="" onclick="gallery.goToPage(28)"></li><li class="" onclick="gallery.goToPage(29)"></li><li class="" onclick="gallery.goToPage(30)"></li><li class="" onclick="gallery.goToPage(31)"></li><li class="" onclick="gallery.goToPage(32)"></li><li class="" onclick="gallery.goToPage(33)"></li><li class="" onclick="gallery.goToPage(34)"></li><li class="" onclick="gallery.goToPage(35)"></li><li class="" onclick="gallery.goToPage(36)"></li><li class="" onclick="gallery.goToPage(37)"></li><li class="" onclick="gallery.goToPage(38)"></li><li class="" onclick="gallery.goToPage(39)"></li><li class="" onclick="gallery.goToPage(40)"></li><li class="" onclick="gallery.goToPage(41)"></li><li class="" onclick="gallery.goToPage(42)"></li><li class="" onclick="gallery.goToPage(43)"></li><li class="" onclick="gallery.goToPage(44)"></li><li class="" onclick="gallery.goToPage(45)"></li><li id="next" onclick="gallery.next()"> + </li></ul>
+	
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

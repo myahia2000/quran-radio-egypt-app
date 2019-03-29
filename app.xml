@@ -1,0 +1,183 @@
+<xml>
+  <navigation type="simple" backgroundColor="#2D2D2D" backgroundImage="" contentOverlap="" itemsPosition="top" textStyle="0" textSize="10" textFont="Shoroq.ttf" iosStyleNavigation="false">
+    <items>
+    </items>
+  </navigation>
+  <targetplatform simulator="Nexus6">Android</targetplatform>
+  <template price="199.99" id="RadioStation2" scaleWebPagesToBaseResolution="false" topadtype="none" bottomadtype="none" globalLogo="" isUniversalApp="false" />
+  <prop id="appname" title="App Name">إذاعة القرآن الكريم من القاهرة</prop>
+  <prop id="tab1text" title="Tab1 Text">
+  </prop>
+  <prop id="tab1icon" title="Tab1 Icon">
+  </prop>
+  <prop id="tab2text" title="Tab2 Text">
+  </prop>
+  <prop id="tab2icon" title="Tab2 Icon">
+  </prop>
+  <prop id="tab3text" title="Tab3 Text">
+  </prop>
+  <prop id="tab3icon" title="Tab3 Icon">
+  </prop>
+  <prop id="tab4text" title="Tab4 Text">
+  </prop>
+  <prop id="tab4icon" title="Tab4 Icon">
+  </prop>
+  <planname>Basic</planname>
+  <page id="tab3.html" type="form" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no">
+  </page>
+  <page id="index.html" type="stripesmenu" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="إذاعة القرآن الكريم من القاهرة" logo="nav-bar.png" shownavbar="yes" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <file id="appStyles.xml" newsfile="yes">
+  </file>
+  <hostedresources>
+  </hostedresources>
+  <androidapptype>0</androidapptype>
+  <androidcategory>23</androidcategory>
+  <androidgamecategory>0</androidgamecategory>
+  <androidpromovideo>
+  </androidpromovideo>
+  <promotext>%D8%A5%D9%84%D9%89%20%D8%B9%D8%B4%D8%A7%D9%82%20%D8%AA%D9%84%D9%83%20%D8%A7%D9%84%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A6%D8%B9%D8%A9%20...%D9%8A%D9%85%D9%83%D9%86%D9%83%D9%85%20%D8%A7%D9%84%D8%A2%D9%86%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%A8%D8%AB%20%D8%A7%D9%84%D8%AD%D9%89%20%D8%A3%D9%88%D9%86%D9%84%D8%A7%D9%8A%D9%86</promotext>
+  <androidcontentratingcategory>0</androidcontentratingcategory>
+  <androidcontentratingemail>alcatelpopc5.me@gmail.com</androidcontentratingemail>
+  <androidC2DM enabled="true" altEnabled="true" />
+  <androidpermissions>
+    <permission name="android.permission.INTERNET" enabled="true" />
+    <permission name="android.permission.ACCESS_COARSE_LOCATION" enabled="false" />
+    <permission name="android.permission.ACCESS_FINE_LOCATION" enabled="false" />
+    <permission name="android.permission.WRITE_EXTERNAL_STORAGE" enabled="true" />
+    <permission name="android.permission.ACCESS_NETWORK_STATE" enabled="true" />
+    <permission name="android.permission.READ_PHONE_STATE" enabled="true" />
+    <permission name="android.permission.RECORD_AUDIO" enabled="false" />
+    <permission name="android.permission.CAMERA" enabled="false" />
+    <permission name="android.permission.VIBRATE" enabled="false" />
+    <permission name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" enabled="false" />
+    <permission name="android.permission.RECEIVE_SMS" enabled="false" />
+    <permission name="android.permission.RECORD_VIDEO" enabled="false" />
+    <permission name="android.permission.MODIFY_AUDIO_SETTINGS" enabled="false" />
+    <permission name="android.permission.READ_CONTACTS" enabled="false" />
+    <permission name="android.permission.WRITE_CONTACTS" enabled="false" />
+    <permission name="android.permission.GET_ACCOUNTS" enabled="false" />
+    <permission name="android.permission.BROADCAST_STICKY" enabled="false" />
+  </androidpermissions>
+  <page id="tab2.html" type="appshare" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="false" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" fbappid="" title="" logo="" shownavbar="yes" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="">
+    <appdescription> انشر التطبيق بين أصدقائك واجعلهم يستمعون البث الحى 
+والمصحف المرتل لأشهر القراء
+https://play.google.com/store/apps/details?id=com.egyapps.quranradioegypt</appdescription>
+    <links>
+      <share_link>http://appsmoment.com/marketr.aspx?p=c8DixrTS4zP2rBcrCsVo2qCa6xn%2FKcPS1G6xoRPFNNmLsa5GjPh0cHEq4duE%2F1OIO3VvC%2B%2ByY0U%3D</share_link>
+      <primarystore>https://play.google.com/store/apps/details?id=com.egyapps.quranradioegypt</primarystore>
+      <iphone>
+      </iphone>
+      <ipad>
+      </ipad>
+      <android>https://play.google.com/store/apps/details?id=com.egyapps.quranradioegypt</android>
+      <kindle>
+      </kindle>
+    </links>
+  </page>
+  <restrictedaccess>
+    <feature id="announcements" enabled="true" />
+    <feature id="calendar" enabled="true" />
+    <feature id="coupon" enabled="true" />
+    <feature id="geofences" enabled="true" />
+    <feature id="loyalty" enabled="true" />
+    <feature id="map" enabled="true" />
+    <feature id="productorder" enabled="true" />
+    <feature id="pushnotifications" enabled="true" />
+    <feature id="Booking" enabled="true" />
+  </restrictedaccess>
+  <rateapp appleid="" rateatlaunch="no" rateatrelaunch="no" message="" cancelmessage="" remindmessage="" actionmessage="" />
+  <ads allowUsingAdvertisingId="false" />
+  <admobpublisher id="ca-app-pub-6635505790637711/2418615185" interstitialUnitId="ca-app-pub-6635505790637711/3895348383" />
+  <doubleclickpublisher unitId="" />
+  <pollfish apiKey="" padding="0" position="na" />
+  <revmobappid id="-" />
+  <airpush appId="" apiKey="" interstitialAdType="" />
+  <scads refreshRate="30" />
+  <googleanalyticsid id="UA-40444490-2" />
+  <localizablelanguage value="en" />
+  <paypalappid id="" />
+  <fbapp apikey="1672742083019627" />
+  <androidAppLicensing enabled="false" publicKey="" />
+  <apkExpansionFiles enabled="false" />
+  <androidInAppBilling enabled="false" />
+  <android installLocation="auto" />
+  <pdftron licenseKey="" />
+  <rotationapp>false</rotationapp>
+  <webView bouncesEnabled="false" hideLoadingAnimation="false" externalSiteZoomEnabled="false" />
+  <sharepointclient url="" username="" password="" />
+  <appstorelink>
+  </appstorelink>
+  <googleMaps androidApiV2Key="" />
+  <baiduMaps baiduMapsApiKeyAndroid="" baiduMapsApiKeyiOS="" />
+  <webapp statusBarStyle="default" iconsStyle="precomposed" offlineModeEnabled="false" inAppLinks="false" />
+  <locationServices>
+    <inUseDescription>
+    </inUseDescription>
+    <alwaysDescription>
+    </alwaysDescription>
+  </locationServices>
+  <inAppSettings />
+  <androidversion>3.9</androidversion>
+  <androidversioncode>11</androidversioncode>
+  <androidbundlename>com.egyapps.quranradioegypt</androidbundlename>
+  <androidshortappname>اذاعة القرآن الكريم من القاهرة</androidshortappname>
+  <syncenabled>true</syncenabled>
+  <description>-%20%D8%A7%D8%B3%D8%AA%D9%85%D8%B9%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%A8%D8%AB%20%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%20%D9%84%D9%85%D8%AD%D8%B7%D8%A9%20%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%85%D9%86%20%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%20%D9%85%D9%86%20%D8%A3%D9%89%20%D9%85%D9%83%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA%20.%0D%0A-%20%D8%A7%D8%B3%D8%AA%D9%85%D8%B9%20%D9%83%D8%B0%D9%84%D9%83%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81%20%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D9%84%20%D8%A8%D8%B5%D9%88%D8%AA%20%D8%A7%D9%84%D8%B4%D9%8A%D9%88%D8%AE%20%D8%A7%D9%84%D8%B0%D9%89%20%D8%A7%D8%B9%D8%AA%D8%AF%D8%AA%20%D8%B9%D9%84%D9%89%20%D8%B3%D9%85%D8%A7%D8%B9%D9%87%D9%85%20%D8%A8%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%3A%20%0D%0A%20%20%20%20%D9%85%D8%AD%D9%85%D9%88%D8%AF%20%D8%AE%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D8%AD%D8%B5%D8%B1%D9%89%20-%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B5%D8%AF%D9%8A%D9%82%20%D8%A7%D9%84%D9%85%D9%86%D8%B4%D8%A7%D9%88%D9%89%20-%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%B7%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B5%D9%85%D8%AF%20-%20%D9%85%D8%B5%D8%B7%D9%81%D9%89%20%D8%A7%D8%B3%D9%85%D8%A7%D8%B9%D9%8A%D9%84%20-%20%D9%85%D8%AD%D9%85%D9%88%D8%AF%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A8%D9%86%D8%A7.%0D%0A-%20%D8%A7%D8%B9%D8%B1%D9%81%20%D9%85%D9%88%D8%A7%D8%B9%D9%8A%D8%AF%20%D8%A3%D8%B0%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D9%84%D9%81%D8%A9%20%D9%84%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D9%85%D8%AD%D8%B7%D8%A9%20%D9%88%D8%B4%D8%A7%D9%87%D8%AF%20%D8%B5%D9%88%D8%B1%20%D8%A7%D9%84%D9%85%D8%B0%D9%8A%D8%B9%D9%8A%D9%86%20%D8%A7%D9%84%D8%B0%D9%89%20%D8%B7%D8%A7%D9%84%D9%85%D8%A7%20%D8%B3%D9%85%D8%B9%D8%AA%20%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%D9%87%D9%85%20%D9%88%D9%84%D9%85%20%D8%AA%D8%B1%D9%87%D9%85%20.%0D%0A%0D%0A%D9%85%D9%84%D8%AD%D9%88%D8%B8%D8%A9%20%3A%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%BA%D9%8A%D8%B1%20%D8%B1%D8%B3%D9%85%D9%89%20unofficial%20%D9%88%D9%84%D9%83%D9%86%D9%87%20%D8%AC%D8%A7%D8%A1%20%D9%84%D9%8A%D8%AD%D9%84%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A5%D9%84%D9%89%20%D9%85%D8%AD%D8%B7%D8%A9%20%D8%A7%D9%84%D9%82%D8%B1%D8%A3%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D9%85%D9%86%20%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%A7%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%20%D8%AD%D9%8A%D8%AB%20%D8%A3%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%89%20%D9%84%D9%84%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9%20%D9%84%D8%A7%20%D9%8A%D8%AA%D9%8A%D8%AD%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%85%D8%A7%D8%B9%20%D8%A5%D9%84%D8%A7%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D9%88%D9%84%D9%8A%D8%B3%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%20.%0D%0A%0D%0A%D9%88%D8%A3%D8%AE%D9%8A%D8%B1%D8%A7%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%B5%D9%86%D8%B9%20%D9%85%D9%86%20%D8%A3%D8%AC%D9%84%20%D8%B9%D8%B4%D8%A7%D9%82%20%D8%AA%D9%84%D9%83%20%D8%A7%D9%84%D8%A5%D8%B0%D8%A7%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B0%D9%8A%D9%86%20%D8%A7%D8%B1%D8%AA%D8%A8%D8%B7%D8%AA%20%D9%82%D9%84%D9%88%D8%A8%D9%87%D9%85%20%D9%88%D8%AA%D8%B9%D9%84%D9%82%20%D9%88%D8%AC%D8%AF%D8%A7%D9%86%D9%87%D9%85%20%D8%A8%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%D9%87%D8%A7%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B4%D8%B9%D8%A9%20%20%D9%88%D9%88%D8%AC%D8%AF%D9%88%D8%A7%20%D9%81%D9%8A%D9%87%D8%A7%20%D9%85%D9%84%D8%A7%D8%B0%D8%A7%20%D9%88%D8%A3%D9%85%D8%A7%D9%86%D8%A7%20%D9%85%D9%86%20%D8%B5%D8%AE%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D9%88%D8%B6%D8%AC%D9%8A%D8%AC%D9%87%D8%A7%20.%0D%0A%0D%0AMade%20With%20Love%20..!!</description>
+  <file id="icon.png" newsfile="yes" />
+  <page id="about-the-station.html" type="classicletter" kind="html" transition="" slidepageid="none" slidetransition="slide" hasreviews="no" hassend="no" hasfields="no" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" />
+  <file id="Abdulbaset300.jpg" newsfile="no" />
+  <page id="alsha3rawy.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <file id="sha3rawy.jpeg" newsfile="no" />
+  <page id="fgallery.html" type="html" title="" logo="" transition="NONE" slidepageid="none" slidetransition="slide" hasreviews="no" hassend="no" hasfields="no" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" shownavbar="yes" interstitialadtype="none" transitionsound="" hidetabbaratpush="no" zoomEnabled="true" loadWebUrlsInSameWebView="false" backgroundColor="none" kind="html" />
+  <file id="menshawy300.jpg" newsfile="yes" />
+  <file id="body-bg.jpg" newsfile="yes" />
+  <page id="hosary1.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="banna.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="menshawy1.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="abdulbaset.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="m-ismail.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="sha3rawy.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <file id="radiostreaming22.html" newsfile="yes" />
+  <file id="morattal.png" newsfile="yes" />
+  <page id="ref3at.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="morattal.html" type="stripesmenu" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="إذاعة القرآن الكريم من القاهرة" logo="nav-bar.png" shownavbar="yes" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="mobilefacebook1.html" type="mobilefacebook" kind="html" transition="" slidepageid="" slidetransition="slide" hasreviews="no" hassend="no" hasfields="no" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" />
+  <file id="refaat.jpg" newsfile="yes" />
+  <dropboxapp dropboxapikey="" />
+  <healthKitServices>
+    <healthShareUsage>
+    </healthShareUsage>
+    <healthUpdateUsage>
+    </healthUpdateUsage>
+  </healthKitServices>
+  <cameraServices>
+    <cameraUsageDescription>
+    </cameraUsageDescription>
+  </cameraServices>
+  <photoLibraryServices>
+    <photoLibraryUsageDescription>
+    </photoLibraryUsageDescription>
+  </photoLibraryServices>
+  <microphoneServices>
+    <microphoneUsageDescription>
+    </microphoneUsageDescription>
+  </microphoneServices>
+  <page id="oldFormThatWorks.html" type="form" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no">
+  </page>
+  <page id="abdulbaset-2.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="mojawad.html" type="stripesmenu" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="إذاعة القرآن الكريم من القاهرة" logo="nav-bar.png" shownavbar="yes" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="banna-2.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="hosary-2.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="m-ismail-2.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="menshawy-2.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <file id="header.jpg" newsfile="yes" />
+  <page id="streaming2.html" type="radiostreaming2" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="false" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" />
+  <file id="circle-skin/controls.jpg" newsfile="yes" />
+  <page id="radiostreaming21backup.html" type="radiostreaming2" kind="html" transition="" slidepageid="" slidetransition="slide" hasreviews="no" hassend="no" hasfields="false" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" />
+  <page id="streaming31backup.html" type="radiostreaming2" kind="html" transition="" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="false" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" />
+  <file id="header-streaming.jpg" newsfile="yes" />
+  <page id="roqia.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="bakara.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+  <page id="download.html" type="videolist" kind="native" transition="" slidepageid="" slidetransition="slide" hasreviews="no" hassend="no" hasfields="false" topadtype="inherited" bottomadtype="inherited" dynamicdata="false" jsonurl="" hidebottombaratpush="no" openPdfInApp="false" openPdfInExternalApp="true" />
+  <page id="kahf.html" type="audioplay" kind="html" transition="NONE" slidepageid="none" slidetransition="" hasreviews="no" hassend="no" hasfields="no" topadtype="none" bottomadtype="none" dynamicdata="false" jsonurl="" hidebottombaratpush="no" hasreviewhtmlkey="no" title="" logo="" shownavbar="yes" interstitialadtype="none" interstitialadview="fullscreen" transitionsound="" hidetabbaratpush="no" zoomEnabled="false" loadWebUrlsInSameWebView="false" backgroundColor="" />
+</xml>
